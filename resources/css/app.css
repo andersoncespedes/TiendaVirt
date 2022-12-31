@@ -1,0 +1,12 @@
+#app .navbar .container ul {
+    list-style: none;
+}
+
+.login{
+   margin: auto;
+}
+.headt{
+    width: 100%;
+    text-align: center;
+}
+
