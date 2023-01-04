@@ -16,7 +16,14 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link  href='{{ asset('css/app.css'); }}' rel="stylesheet"/>
     <style>
+        table{
+            background: white;
 
+        }
+        table tr td{
+            text-align: center;
+            border: 2px solid black
+        }
     </style>
     <!-- Scripts -->
 

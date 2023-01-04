@@ -1,6 +1,35 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('content')
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link  href='{{ asset('/css/app.css'); }}' rel="stylesheet" type="text/css"/>
+    <style>
+        .mans{
+            width: 50%;
+
+            margin: auto;
+            margin-top: 10%;
+        }
+        .simp{
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(23, 31, 11, 0.1);
+        }
+    </style>
+</head>
+<body>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -74,4 +103,4 @@
         </div>
     </div>
 </div>
-@endsection
+</body>

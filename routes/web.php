@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Models\product;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,15 +15,17 @@ use App\Http\Controllers\ProductController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
+
 Route::get('/', function () {
     return view('welcome');
 });
-*/
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/logout', [HomeController::class, 'perform'])->name('logout');
+
+Route::get('/listaP', [ProductController::class, 'show'])->name('listaP');
 Route::get('/producto', [HomeController::class, 'producto'])->name('registrarP');
 Route::post('/productoC', [ProductController::class, 'create'])->name('productR');
 

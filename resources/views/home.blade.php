@@ -11,7 +11,7 @@
                     <h3><a href= "{{ route('registrarP') }}"> Registrar Producto</a></h3>
                 </div>
                 <div class="op2">
-                    asdsad
+                    <h3><a href= "{{ route('listaP') }}"> Lista Producto</a></h3>
                 </div>
             </div>
             <div class="sele2">
