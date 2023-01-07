@@ -1,24 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-    <table width = '100%'>
+    <table width = '100%' id="rath">
         <tr>
-            <td>id</td>
-            <td>Nombre</td>
-            <td>Codigo</td>
-            <td>Cantidad</td>
-            <td>Marca</td>
-            <td>Tipo de Producto</td>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>Cantidad</th>
+            <th>Marca</th>
+            <th>Tipo de Producto</th>
 
         </tr>
         @foreach ($product as $value)
             <tr>
+
                 <td>{{ $value->id }}</td>
-                <td>{{ $value->name_pro }}</td>
+                <td><a href="{{route('showById', $value->id)}}">{{ $value->name_pro }}</a></td>
                 <td>{{ $value->code_pro }}</td>
                 <td>{{ $value->quanty }}</td>
                 <td>{{ $value->marca }}</td>
                 <td>{{ $value->type_pro }}</td>
+
             </tr>
         @endforeach
     </table>

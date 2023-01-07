@@ -20,9 +20,14 @@
             background: white;
 
         }
-        table tr td{
+        #rath tr td, th{
             text-align: center;
-            border: 2px solid black
+            border: 2px solid black;
+            padding: 15px;
+        }
+        #rath tr:hover{
+            transition: 300ms all ease;
+            background: gray;
         }
     </style>
     <!-- Scripts -->
