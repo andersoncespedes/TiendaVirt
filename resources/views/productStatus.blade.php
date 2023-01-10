@@ -18,16 +18,11 @@
     </tr>
 </table>
 <div id="botones">
-    <button class="btn btn-warning">Editar</button>
+    <a href = "{{route('editP', $product[0]->id)}}" class="btn btn-warning" >Editar</a>
     <form method="POST" action="{{ route('destroyProd',$product[0]->id )}}">
         @csrf
         @method('DELETE')
         <button type="submit" class="btn btn-danger">Eliminar</button>
       </form>
 </div>
-
-
-
-
-
 @endsection
