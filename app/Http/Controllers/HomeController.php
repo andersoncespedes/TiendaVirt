@@ -37,10 +37,7 @@ class HomeController extends Controller
     public function producto(){
         return view('producto');
     }
-    public function edit($id){
-        $product = product::find($id)->get();
-        return view('editProduct', ['product' => $product]);
-    }
+
     public function perform(){
         Session::flush();
 
