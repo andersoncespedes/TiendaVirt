@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ClientController;
+
 use App\Models\product;
 
 /*
@@ -25,6 +27,7 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/logout', [HomeController::class, 'perform'])->name('logout');
 Route::get('/producto', [HomeController::class, 'producto'])->name('registrarP');
+Route::get('/cliente', [HomeController::class, 'cliente'])->name('cliente');
 
 Route::get('/listaP', [ProductController::class, 'show'])->name('listaP');
 Route::get('/editp/{id}', [ProductController::class, 'edit'])->name('editP');
@@ -33,6 +36,10 @@ Route::put('/updateP/{id}', [ProductController::class, 'update'])->name('updateP
 Route::get('/productoVisual/{id}', [ProductController::class, 'showById'])->name('showById');
 Route::post('/productoC', [ProductController::class, 'create'])->name('productR');
 Route::delete('productD/{id}', [ProductController::class, 'destroy'])->name('destroyProd');
+
+Route::post('/cliente', [ClientController::class, 'create'])->name('crearClient');
+Route::get('/Listcliente', [ClientController::class, 'show'])->name('listClient');
+
 
 
 

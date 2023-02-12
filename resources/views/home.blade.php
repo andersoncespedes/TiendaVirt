@@ -16,10 +16,10 @@
             </div>
             <div class="sele2">
                 <div class="op1">
-                    sdada
+                    <h3><a href="{{route('cliente')}}">Registrar Cliente</a></h3>
                 </div>
                 <div class="op2">
-                    asda
+                    <h3><a href="{{route('listClient')}}">Lista Cliente</a></h3>
                 </div>
             </div>
         </div>

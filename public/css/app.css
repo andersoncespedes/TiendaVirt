@@ -58,7 +58,7 @@ margin: auto;
 .opciones:hover{
     box-shadow: 15px 5px 0 gray;
 }
-.opciones .sele1 .op1,.opciones .sele1 .op2,.opciones .sele2 .op1,.opciones .sele2 .op2{
+.opciones .sele1,.opciones .sele2{
     width: 100%;
     margin: 20px
 }

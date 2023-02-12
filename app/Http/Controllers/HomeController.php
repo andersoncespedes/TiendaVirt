@@ -37,7 +37,9 @@ class HomeController extends Controller
     public function producto(){
         return view('producto');
     }
-
+    public function cliente(){
+        return view('cliente');
+    }
     public function perform(){
         Session::flush();
 
