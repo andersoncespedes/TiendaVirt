@@ -40,7 +40,7 @@
                 <ul>
                     <li><a href="{{route('home')}}">Home</a></li>
                     <li><a href="">FAQ</a></li>
-                    <li><a href="">Tienda</a></li>
+                    <li><a href="{{route('tienda')}}">Tienda</a></li>
                     <li><a href="">Factura</a></li>
                     <li style="float: right"><a href="{{route('logout');}}">LogOut</a></li>
                 </ul>

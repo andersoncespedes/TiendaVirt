@@ -34,11 +34,16 @@ Route::get('/editp/{id}', [ProductController::class, 'edit'])->name('editP');
 Route::put('/updateP/{id}', [ProductController::class, 'update'])->name('updateP');
 
 Route::get('/productoVisual/{id}', [ProductController::class, 'showById'])->name('showById');
+Route::get('/tienda', [ProductController::class, 'tienda'])->name('tienda');
+
 Route::post('/productoC', [ProductController::class, 'create'])->name('productR');
+Route::get('/buscarp', [ProductController::class, 'buscar'])->name('buscar');
 Route::delete('productD/{id}', [ProductController::class, 'destroy'])->name('destroyProd');
 
 Route::post('/cliente', [ClientController::class, 'create'])->name('crearClient');
 Route::get('/Listcliente', [ClientController::class, 'show'])->name('listClient');
+Route::get('/clienteVisual/{id}', [ClientController::class, 'showById'])->name('showClientById');
+Route::delete('dcliente/{id}', [ClientController::class, 'delete'])->name('dcliente');
 
 
 

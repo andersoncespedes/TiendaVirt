@@ -13,16 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->id("id_prod");
-            $table->string('name_pro', 20);
-            $table->string('code_pro', 20)->unique();
-            $table->integer('quanty')->nullable();
-            $table->string('marca', 20);
-            $table->string('type_pro',20);
-            $table->string('imagen',100);
+        Schema::create('facturas', function (Blueprint $table) {
+            $table->id();
+            $table->string('code', 20);
+            $table->bigInteger('id_prod')->unsigned();
+            $table->foreign('id_prod')->references('id_prod')->on('products')->onUpdate('cascade')->onDelete('cascade');;
+            $table->dateTime('fecha', $precision = 0);
             $table->timestamps();
         });
+
     }
 
     /**
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('table_factura');
     }
 };

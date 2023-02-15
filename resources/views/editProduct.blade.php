@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<form action="{{route('updateP', $product[0]->id)}}" method="POST">
+<form action="{{route('updateP', $product[0]->id_prod)}}" method="POST">
     @method('PUT')
     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
     <label for="">Nombre del Producto</label>

@@ -14,8 +14,8 @@
         @foreach ($product as $value)
             <tr>
 
-                <td>{{ $value->id }}</td>
-                <td><a href="{{route('showById', $value->id)}}">{{ $value->name_pro }}</a></td>
+                <td>{{ $value->id_prod }}</td>
+                <td><a href="{{route('showById', $value->id_prod)}}">{{ $value->name_pro }}</a></td>
                 <td>{{ $value->code_pro }}</td>
                 <td>{{ $value->quanty }}</td>
                 <td>{{ $value->marca }}</td>

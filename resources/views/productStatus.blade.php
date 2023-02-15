@@ -4,7 +4,7 @@
 <table width = '100%' id="stat">
     <tr>
         <td rowspan="2">Nombre del Producto: {{$product[0]->name_pro}}</td>
-        <td>Producto Id: {{$product[0]->id}}</td>
+        <td>Producto Id: {{$product[0]->id_prod}}</td>
     </tr>
     <tr>
         <td>Cantidad de producto: {{$product[0]->quanty}}</td>
@@ -18,8 +18,8 @@
     </tr>
 </table>
 <div id="botones">
-    <a href = "{{route('editP', $product[0]->id)}}" class="btn btn-warning" >Editar</a>
-    <form method="POST" action="{{ route('destroyProd',$product[0]->id )}}">
+    <a href = "{{route('editP', $product[0]->id_prod)}}" class="btn btn-warning" >Editar</a>
+    <form method="POST" action="{{ route('destroyProd',$product[0]->id_prod )}}">
         @csrf
         @method('DELETE')
         <button type="submit" class="btn btn-danger">Eliminar</button>

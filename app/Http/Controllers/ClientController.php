@@ -17,12 +17,18 @@ class ClientController extends Controller
     }
     public function create(Request $param){
         $validation = $this->Validator($param);
-        $this->errors = $validation->messages();
+        if($validation){
+            $this->errors = $validation;
+        }
         Client::create($param->all());
         return redirect()->to('home');
     }
     public function show(){
         $cliente = Client::get();
         return view('listaClient', ['cliente' => $cliente]);
+    }
+    public function showById($id){
+        $cliente = Client::findOrFail($id)->get();
+        return view('clieneStatus', ['cliente' => $cliente[0]]);
     }
 }

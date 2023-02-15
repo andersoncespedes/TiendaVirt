@@ -12,7 +12,7 @@
             <tr>
 
                 <td>{{ $value->id }}</td>
-                <td><a href="{{route('showById', $value->id)}}">{{ $value->nombre }}</a></td>
+                <td><a href="{{route('showClientById', $value->id)}}">{{ $value->nombre }}</a></td>
                 <td>{{ $value->apellido }}</td>
                 <td>{{ $value->cedula }}</td>
 
