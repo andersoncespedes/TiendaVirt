@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\product;
+use App\Models\Factura;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
@@ -27,6 +29,13 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+    public function factura(){
+        $product = product::get();
+        $factura = Factura::select('*')
+        ->join('products', 'facturas.id_prod', '=', 'products.id_prod')
+        ->get();
+        return view('factura', ['product' => $product, 'factura' => $factura]);
     }
     public function registro(){
         return view('auth\register');

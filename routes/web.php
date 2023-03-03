@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\FacturaController;
+
 
 use App\Models\product;
 
@@ -28,6 +30,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/logout', [HomeController::class, 'perform'])->name('logout');
 Route::get('/producto', [HomeController::class, 'producto'])->name('registrarP');
 Route::get('/cliente', [HomeController::class, 'cliente'])->name('cliente');
+Route::get('/facturaC', [HomeController::class, 'factura'])->name('facturaM');
 
 Route::get('/listaP', [ProductController::class, 'show'])->name('listaP');
 Route::get('/editp/{id}', [ProductController::class, 'edit'])->name('editP');
@@ -45,7 +48,4 @@ Route::get('/Listcliente', [ClientController::class, 'show'])->name('listClient'
 Route::get('/clienteVisual/{id}', [ClientController::class, 'showById'])->name('showClientById');
 Route::delete('dcliente/{id}', [ClientController::class, 'delete'])->name('dcliente');
 
-
-
-
-
+Route::post('/facturaC', [FacturaController::class, 'create'])->name('facturaR');

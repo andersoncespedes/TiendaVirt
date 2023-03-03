@@ -14,8 +14,8 @@
                 <div class="titleP">
                     <h3>{{$value['name_pro']}}</h3>
                 </div>
+                <img src="{{asset("images/".$value['imagen'])}}" alt="">
                 <div class="contentP">
-                    <img src="{{asset("storage/app/".$value['imagen'])}}" alt="">
                     Codigo: {{$value['code_pro']}}<br>
                     Cantidad: {{$value['quanty']}}<br>
                     Marca: {{$value['marca']}}<br>

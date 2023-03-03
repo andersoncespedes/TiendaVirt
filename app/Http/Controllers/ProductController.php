@@ -22,14 +22,15 @@ class ProductController extends Controller
         if($validation){
            $this->errors = $validation; 
         }
-            $path = request()->file('imagen')->store('');  
+        $imageName = time().'.'.request()->imagen->extension(); 
+        $path = request()->imagen->move(public_path('images'), $imageName);
             $product = new product;
             $product->name_pro = request()->name_pro;
             $product->code_pro = request()->code_pro; 
             $product->quanty = request()->quanty; 
             $product->marca = request()->marca; 
             $product->type_pro = request()->type_pro; 
-            $product->imagen = $path; 
+            $product->imagen = $imageName; 
             $product->save();
         return redirect()->to('home');
     }

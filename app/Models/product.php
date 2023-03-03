@@ -13,4 +13,5 @@ class product extends Model
     {
         return $this->belongsTo(Factura::class, 'id_prod', 'id_prod');
     }
+    
 }
